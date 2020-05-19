@@ -1,112 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shape of my code</title>
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,200;1,700;1,900&display=swap" rel="stylesheet">
-
-
-    <title>NEOS</title>
-  </head>
-  <body>
-    <div class="parallax-1">
-      <div class="motto"><p>Drukujemy na każdym podłożu...</p></div>
-    </div>
-      <header>
-        <a href="index.html"><img class="logo" src="images/logo.png" alt="logo" ></a>
-            <nav>
-                <ul class="navi">
-                    <li><a href="index.html">START</a></li>
-                    <li><a href="index.html">OFERTA</a></li>
-                    <li><a href="index.html">O NAS</a></li>
-                    <li><a href="index.html">KONTAKT</a></li>
-                </ul>
-            </nav>
-      </header>
-        <div class="container-1">
-          <div class="catalogue-container">
-            <a href="index.html"><img class="catalog-icon" src="images/book-solid.svg" alt="logo"></a>
-            <p>Katalog</p>
-          </div>
-          <div class="catalogue-container">
-            <a href="index.html"><img class="catalog-icon" src="images/book-solid.svg" alt="logo"></a>
-            <p>Katalog</p>
-          </div>
-          <div class="catalogue-container">
-            <a href="index.html"><img class="catalog-icon" src="images/book-solid.svg" alt="logo"></a>
-            <p>Katalog</p>
-          </div>
-          <div class="catalogue-container">
-            <a href="index.html"><img class="catalog-icon" src="images/book-solid.svg" alt="logo"></a>
-            <p>Katalog</p>
-          </div>
-          <div class="catalogue-container">
-            <a href="index.html"><img class="catalog-icon" src="images/book-solid.svg" alt="logo"></a>
-            <p>Katalog</p>
-          </div>
+</head>
+<body>
+    <div class="container-half"></div>
+    <div class="container-half" id="c-h-right"></div>
+        <div class="bg-modal">
+            <div class="modal-content">
+                <form action="">
+                    <label for="nickname">Who are you?</label>
+                        <input type="text" class="input-box" id="nickname" placeholder="Nickname">
+                    <label for="amount">How many shapes you want?</label>
+                        <input type="number" class="input-box" id="amount" placeholder="Amount">
+                    <input type="radio" class="input-radio" name="shape" value="0"> Triangle<br>
+                    <input type="radio" class="input-radio" name="shape" value="1"> Square<br>
+                    <input type="radio" class="input-radio" name="shape" value="2"> Circle<br>
+                    <button type="submit" class="btn-submit" disabled>OK</button>
+                    <button type="reset" class="btn-cancel">CANCEL</button>
+                </form>
+            </div>
         </div>
-        <div class="parallax-2"></div>
-      <div class="container-2">
-          <div class="container-left">
-            <div class="triangle-top"></div>
-            <div class="triangle-bottom"></div>
-          </div>
-          
-          <div class="container-right">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan ornare urna. <br><br>
-        Ut sed feugiat ipsum. Nulla elementum fermentum consectetur. Duis non purus nulla. Nulla mauris eros, commodo non metus vel, sodales accumsan tellus.<br><br>
-        Ut laoreet sem turpis, ultricies ultrices enim laoreet quis. Integer facilisis vitae nulla ac lacinia. <br><br>
-        In sapien justo, aliquam sed dignissim sit amet, imperdiet ac dui.<br><br>
-        Mauris in dignissim metus, nec elementum magna. Cras rutrum malesuada sapien vitae blandit.<br><br>
-              <p class="flip-it">[ 1 ]</p>
-          </div>
-      </div>
-        <div class="parallax-3"></div>
-        <div class="container-3">
-          <div class="container-left2">
-            <div class="line-rotate-45"></div>
-            <div class="x-link-top"><a href="index.html"><img class="catalog-icon-x" src="images/book-solid.svg" alt="logo"></a></div>
-            <div class="x-link-right"><a href="index.html"><img class="catalog-icon-x" src="images/book-solid.svg" alt="logo"></a></div>
-            <div class="x-link-left"><a href="index.html"><img class="catalog-icon-x" src="images/book-solid.svg" alt="logo"></a></div>
-            <div class="x-link-bottom"><a href="index.html"><img class="catalog-icon-x" src="images/book-solid.svg" alt="logo"></a></div>
-          </div>
-          <div class="container-right2">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut accumsan ornare urna. <br><br>
-        
-        Ut sed feugiat ipsum. Nulla elementum fermentum consectetur. Duis non purus nulla. Nulla mauris eros, commodo non metus vel, sodales accumsan tellus.<br><br>
-        
-        Ut laoreet sem turpis, ultricies ultrices enim laoreet quis. Integer facilisis vitae nulla ac lacinia. <br><br>
-        
-        In sapien justo, aliquam sed dignissim sit amet, imperdiet ac dui.<br><br>
-        
-        Mauris in dignissim metus, nec elementum magna. Cras rutrum malesuada sapien vitae blandit.</div>
-      </div>
+<script>
+    window.onload = function() {
+        document.querySelector('.bg-modal').style.display = 'flex';
+    }
+        document.querySelector('.btn-cancel').addEventListener('click', function() {
+            document.querySelector('.bg-modal').style.display = 'none';
+        });
+        document.querySelector('.btn-submit').addEventListener('click', function() {
+            event.preventDefault()
 
-      <div class="parallax-4"></div>
-      <div class="container-4">
-          <div class="gallery">
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1551949730-c0b55d675af1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1565098235617-1d429c400daa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="">
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1565099824688-e93eb20fe622?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="">
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1565192167286-5d4298f23aed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=716&q=80" alt="">
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1565204310681-74dd89a559cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80" alt="">
-          
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1565099824688-e93eb20fe622?ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80" alt="">
-          
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1565098235617-1d429c400daa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80" alt="">
-          
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1551949730-c0b55d675af1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
-          
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1565192167286-5d4298f23aed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=716&q=80" alt="">
-          
-            <img class="gallery-item" src="https://images.unsplash.com/photo-1565204310681-74dd89a559cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80" alt="">
-          </div>
+            let myName = document.querySelector('#nickname').value;
+            let shapesAmount = document.querySelector('#amount').value
 
-      </div>
-        <footer>
-            Jakis footer
-        </footer>
+                console.log("na imie mam " + myName);
+                console.log("poprosze " + shapesAmount + " kształtów");
 
-  </body>
+                sessionStorage.setItem ('name', myName);
+                sessionStorage.setItem ('amount', shapesAmount);
+
+        let shapeRadio = document.querySelector('input[name="shape"]:checked').value;
+            if (shapeRadio == 0)
+                console.log("wybieram Trójkąty")
+            else if (shapeRadio == 1)
+                console.log("wybieram Kwadraty")
+            else 
+                console.log("wybieram Koła");
+
+            sessionStorage.setItem ('shape', shapeRadio);
+            }); 
+
+        let btnSubmit = document.querySelector('.btn-submit');
+        let input = document.querySelector('.input-box');
+            input.addEventListener('keyup', () => {
+                if (input.value.length < 3) btnSubmit.disabled = true
+                else btnSubmit.disabled = false;
+        
+        });
+        sessionStorage.getItem('name');
+        sessionStorage.getItem('amount');
+        sessionStorage.getItem('shape');
+        
+</script>
+</body>
+</html>
